@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gashaw Mequanint Moges | Educator Profile</title>
+    <style>
+        /* --- GLOBAL DESIGN AND VARIABLES --- */
+        :root {
+            --primary-blue: #1e3a8a;
+            /* Traditional school deep blue */
+            --accent-gold: #d97706;
+            /* Excellence gold */
+            --text-dark: #1f2937;
+            --bg-light: #f9fafb;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        /* --- STICKY NAVIGATION --- */
+        nav {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 8%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav .nav-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* --- HERO BANNER SECTION --- */
+        .hero-banner {
+            background: linear-gradient(rgba(30, 58, 138, 0.9), rgba(15, 23, 42, 0.95));
+            color: var(--white);
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero-banner h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .hero-banner h2 {
+            font-size: 1.4rem;
+            color: var(--accent-gold);
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .hero-banner p {
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* --- BUTTONS --- */
+        .btn-action {
+            background-color: var(--accent-gold);
+            color: var(--white);
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: background 0.3s ease, transform 0.2s;
+            cursor: pointer;
+        }
+
+        .btn-action:hover {
+            background-color: #b45309;
+            transform: translateY(-2px);
+        }
+
+        /* --- RESPONSIVE CONTAINER --- */
+        .main-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* --- CONTENT CARDS --- */
+        .content-card {
+            background-color: var(--white);
+            padding: 35px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+        }
+
+        .content-card h3 {
+            color: var(--primary-blue);
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #e5e7eb;
+            padding-bottom: 8px;
+        }
+
+        /* --- RESOURCE LIST STYLING --- */
+        .resource-list {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .resource-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            background-color: #fafafa;
+        }
+
+        .resource-item span {
+            font-weight: 600;
+        }
+
+        .btn-download {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 6px 15px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: opacity 0.2s;
+        }
+
+        .btn-download:hover {
+            opacity: 0.9;
+        }
+
+        /* --- CONTACT FORM --- */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 5px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #0f172a;
+            color: var(--white);
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            font-size: 0.95rem;
+        }
+
+        /* --- MOBILE RESPONSIVENESS --- */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            nav ul {
+                margin-top: 10px;
+            }
+
+            nav ul li {
+                margin: 0 10px;
+            }
+
+            .hero-banner h1 {
+                font-size: 2rem;
+            }
+
+            .resource-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- STICKY TOP NAVIGATION -->
+    <nav>
+        <div class="nav-title">Gashaw M. Moges</div>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#resources">Student Resources</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero-banner">
+        <h1>Gashaw Mequanint Moges</h1>
+        <h2>Professional Educator at Abune Gorgorios School</h2>
+        <p>Dedicated to empowering the next generation with knowledge, critical thinking skills, and strong ethical
+            values to build a brighter future.</p>
+        <a href="#contact" class="btn-action">Get In Touch</a>
+    </header>
+
+    <!-- MAIN INTERACTIVE HUB -->
+    <main class="main-container">
+
+        <!-- ABOUT ME SECTION -->
+        <section id="about" class="content-card">
+            <h3>About Professional Background</h3>
+            <p>Welcome to my global access web portal. As an educator at Abune Gorgorios Schools, I strive to create an
+                inclusive and dynamic learning environment for all my students. I am highly committed to combining
+                modern instructional technology with essential structural foundational skills.</p>
+            <p style="margin-top: 15px;">Whether you are a student looking for shared class files, a parent checking
+                updates, or a fellow teacher looking to collaborate, this portal keeps me accessible to the school
+                community anywhere and anytime.</p>
+        </section>
+
+        <!-- STUDENT RESOURCES SECTION -->
+        <section id="resources" class="content-card">
+            <h3>Student Download Center</h3>
+            <p>Access and download class syllabi, worksheets, and study guides instantly from any browser device:</p>
+
+            <ul class="resource-list">
+                <li class="resource-item">
+                    <div>
+                        <span>Academic Study Guide Checklist</span>
+                        <p style="font-size: 0.85rem; color: #64748b;">PDF Document — Essential exam preparation points
+                        </p>
+                    </div>
+                    <a href="#" class="btn-download"
+                        onclick="alert('Link placeholder: Attach your actual upload URL inside the href attribute!')">Download
+                        File</a>
+                </li>
+                <li class="resource-item">
+                    <div>
+                        <span>Chapter Review Exercise Sheet</span>
+                        <p style="font-size: 0.85rem; color: #64748b;">Word Document — Take-home practice assignment</p>
+                    </div>
+                    <a href="#" class="btn-download"
+                        onclick="alert('Link placeholder: Attach your actual upload URL inside the href attribute!')">Download
+                        File</a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- CONTACT INTERACTION SECTION -->
+        <section id="contact" class="content-card">
+            <h3>Send Me an Inquiry</h3>
+            <p style="margin-bottom: 20px;">Have a question about assignments or classroom curriculum details? Submit
+                the message box below:</p>
+
+            <form id="contact-teacher-form">
+                <div class="form-group">
+                    <label for="sender-name">Your Full Name</label>
+                    <input type="text" id="sender-name" placeholder="e.g. Abebe Kebede" required>
+                </div>
+                <div class="form-group">
+                    <label for="sender-email">Email Address</label>
+                    <input type="email" id="sender-email" placeholder="name@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="msg-body">Message Details</label>
+                    <textarea id="msg-body" rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
+                <button type="submit" class="btn-action" style="width: 100%;">Submit Message Online</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+        <p>&copy; 2026 Gashaw Mequanint Moges | Abune Gorgorios School Educator Profile Portal.</p>
+        <p style="font-size: 0.8rem; opacity: 0.6; margin-top: 5px;">Optimized for lightning-fast global access across
+            mobile networks and computing devices.</p>
+    </footer>
+
+    <!-- --- INTERACTIVE JAVASCRIPT LOGIC --- -->
+    <script>
+        document.getElementById('contact-teacher-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevents page reload on submission
+
+            const name = document.getElementById('sender-name').value;
+            const email = document.getElementById('sender-email').value;
+            const message = document.getElementById('msg-body').value;
+
+            // Simple visual confirmation
+            alert(`Thank you, ${name}! Your inquiry has been processed successfully. Teacher Gashaw will review your note via ${email}.`);
+
+            // Clear out form inputs
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>
